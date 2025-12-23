@@ -1,0 +1,49 @@
+
+.control-panel{
+  width: 45%;
+}
+
+.parent-props{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(3, 0, 0);
+  
+}
+
+ .prop-grp{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  border: 1px solid black;
+  height: 35px;
+  align-items: center;
+  
+}
+
+label{
+  margin-left: 10px;
+  color: #212529;
+  font-weight: bold;
+  font-family: 20px;
+  cursor: pointer;
+}
+
+.prop-vals{
+  cursor: pointer;
+  color: #212529;
+}
+
+.prop-vals:hover{
+  color: #ea638cb9;
+}
+
+.selected{
+  cursor: pointer;
+  text-decoration: underline;
+  color: #c9184a;
+}
+
+
+
+
+

@@ -3,10 +3,10 @@ export const flexboxContext = createContext()
 
 function FlexboxContext ({children}){
    
-  // parents flexbox properties / default values
+  // parent flexbox properties / default values
   const [flexDirection , setFlexDirection] = useState("row")  //defines main axis
   const [flexWrap , setFlexWrap] = useState("nowrap") 
-  const [justifyContetnt , setJustifyContent] = useState("flex-start") // main axis
+  const [justifyContent , setJustifyContent] = useState("flex-start") // main axis
   const [alignItems , setAlignItems] = useState("stretch") // cross axis
   const [alignContent , setAlignContent] = useState("stretch") // cross axis , only works when flexwrap is enabeled
   const [gap , setGap] = useState(0)
@@ -18,7 +18,7 @@ function FlexboxContext ({children}){
     setFlexDirection,
     flexWrap,
     setFlexWrap,
-    justifyContetnt,
+    justifyContent,
     setJustifyContent,
     alignItems,
     setAlignItems,
