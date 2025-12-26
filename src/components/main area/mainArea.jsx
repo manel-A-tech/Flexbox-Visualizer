@@ -5,10 +5,15 @@ import './mainArea.css'
 function MainArea (){
   const {flexDirection , flexWrap , justifyContent , alignItems , alignContent , gap } = useContext(flexboxContext)
   return(
-    <>
+   
     
     
-      <div className="parent" style={{ 
+      <div className='main-area-container'>
+        <div className='axis-sprecification'>
+          <span>Main Axis: {flexDirection === "row" ? "Horizontal →" : "Vertical ↓"}</span>
+          <span>Cross Axis: {flexDirection === "row" ? "Vertical ↓" : "Horizontal →"}</span>
+        </div>
+        <div className="parent" style={{ 
         flexDirection: flexDirection,
         flexWrap : flexWrap ,
         justifyContent: justifyContent ,
@@ -20,8 +25,9 @@ function MainArea (){
      <div className="item">2</div>
      <div className="item">3</div>
      </div> 
+      </div>
 
-    </>
+  
   )
 }
 

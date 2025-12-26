@@ -5,16 +5,41 @@
 
 .parent-props{
   display: flex;
-  flex-direction: column;
-  border: 2px solid rgb(3, 0, 0);
+  flex-direction: column; 
+}
+
+.control-panel-header{
   
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.control-panel-header h2{
+  color: #212529;
+}
+.control-btns{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 5px;
+  padding-right: 5px;
+}
+
+.control-btns button{
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: underline;
+  color: #212529;
 }
 
  .prop-grp{
   display: flex;
   flex-direction: row;
   gap: 20px;
-  border: 1px solid black;
+  border: 1px solid #21252962;
   height: 35px;
   align-items: center;
   
@@ -41,6 +66,28 @@ label{
   cursor: pointer;
   text-decoration: underline;
   color: #c9184a;
+}
+
+.generated-css{
+   margin: 20px auto;
+   width: 60%;
+   padding: 10px;
+   height: 180px;
+   background-color: #e9ecef;
+}
+
+#parent{
+  font-size: 20px;
+  color: #212529;
+  font-weight: 400;
+  
+}
+
+.css-code{
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  margin-top: 15px;
 }
 
 

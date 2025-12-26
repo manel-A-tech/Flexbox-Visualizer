@@ -1,14 +1,36 @@
 .parent{
   display: flex;
-  flex-grow: 1;
+  border: 5px solid #ff8fab;
+  height: 450px;
+  margin: 35px auto;
+  background-color: #ffe5ecba;
 }
 
+.main-area-container{
+ 
+  height: fit-content;
+  height: 550px;
+  flex-grow: 1;
+}
 
 .item {
   width: 50px;
   height: 50px;
-  border: 1px solid black;
+  border: 2px solid #a2d2ff;
+  background-color:#caf0f875;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #a2d2ff;
+}
+
+.axis-sprecification{
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+ color: #212529;
+ font-size: 20px;
 }

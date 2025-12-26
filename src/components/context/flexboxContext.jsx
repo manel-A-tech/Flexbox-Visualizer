@@ -11,6 +11,8 @@ function FlexboxContext ({children}){
   const [alignContent , setAlignContent] = useState("stretch") // cross axis , only works when flexwrap is enabeled
   const [gap , setGap] = useState(0)
 
+  // children flexbox properties / default values
+
   
 
   const value = {

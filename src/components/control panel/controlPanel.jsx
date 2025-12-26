@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import {flexboxContext} from '../context/flexboxContext.jsx'
 import './controlPanel.css'
 
@@ -11,15 +11,42 @@ function ControlPanel (){
   const alignItemsVals = ["flex-start" , "flex-end", "center" , "baseline" , "stretch"]
   const alignContentVals = ["flex-start" , "flex-end" , "center" , "space-between" , "space-around" , "stretch"]
   
+  const [showCode , setShowCode] =useState(false)
+  const [btnContent , setBtnContent] = useState("Show Code")
+
+  const handleReset = ()=>{
+    setFlexDirection('row')
+    setFlexWrap('nowrap')
+    setJustifyContent('flex-start')
+    setAlignItems('stretch')
+    setAlignContent('stretch')
+    setGap(0)
+  }
+
+  const handleShowCode = ()=>{
+     if(showCode === false && btnContent === "Show Code"){
+      setShowCode(true)
+      setBtnContent("Hide Code")
+     }else{
+      setShowCode(false)
+      setBtnContent('Show Code')
+     }
+  }
 
    
   return(
     <>
     <div className='control-panel'>
-      <div className="parent-props">
-      <h2>
+      <div className="control-panel-header">
+        <h2>
         Parent Properties
       </h2>
+      <div className="control-btns">
+        <button onClick={(e)=>handleShowCode()}> {btnContent} </button>
+        <button onClick={(e)=>handleReset()}>Reset</button>
+      </div>
+      </div>
+      <div className="parent-props">
       <div className="prop-grp">
         <label>Flex Direction</label>
         {flexDirectionVals.map((flexDirVal)=>(
@@ -55,6 +82,24 @@ function ControlPanel (){
         <input type="number"  value={gap} onChange={(e)=>setGap(e.target.value)} />
       </div>
       </div>
+      {
+        showCode ? (
+          <div className='generated-css'>
+            <span id='parent'>Parent:</span>
+            <div className='css-code'>
+              <span>display: flex;</span>
+              <span>flex-direction: {flexDirection};</span>
+              <span>flex-wrap: {flexWrap}; </span>
+              <span>justify-content: {justifyContent};</span>
+              <span>align-items: {alignItems};</span>
+              <span>align-content: {alignContent}; </span>
+              <span>gap: {gap}px;</span>
+            </div>
+          </div>
+        ):(
+          <div></div>
+        )
+      }
     </div>
     </>
   )
