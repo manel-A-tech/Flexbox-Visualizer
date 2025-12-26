@@ -11,23 +11,23 @@ function FlexboxContext ({children}){
   const [alignContent , setAlignContent] = useState("stretch") // cross axis , only works when flexwrap is enabeled
   const [gap , setGap] = useState(0)
 
-  // children flexbox properties / default values
 
-  
+
+  // children flexbox properties / default values
+  const [flexGrow , setFlexGrow] = useState(0) //how much an item grows compared to other items when there is extra space
+  const [flexShrink , setFlexShrink] =useState(1) //how much an item shrinks compared to others when space is limited
+  const [alignSelf , setAlignSelf] = useState('auto') //Overrides the container’s align-items value for a single item.
 
   const value = {
-    flexDirection , 
-    setFlexDirection,
-    flexWrap,
-    setFlexWrap,
-    justifyContent,
-    setJustifyContent,
-    alignItems,
-    setAlignItems,
-    alignContent,
-    setAlignContent,
-    gap,
-    setGap
+    flexDirection , setFlexDirection,
+    flexWrap, setFlexWrap,
+    justifyContent, setJustifyContent,
+    alignItems, setAlignItems,
+    alignContent, setAlignContent,
+    gap,setGap,
+    flexGrow ,  setFlexGrow,
+    flexShrink , setFlexShrink ,
+    alignSelf , setAlignSelf
   }
 
   return(
