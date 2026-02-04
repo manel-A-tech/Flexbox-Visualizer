@@ -1,7 +1,7 @@
 .parent{
   display: flex;
   border: 5px solid #ff8fab;
-  height: 450px;
+  min-height: 450px;
   margin: 35px auto;
   background-color: #ffe5ecba;
 }
@@ -14,8 +14,7 @@
 }
 
 .item {
-  width: 50px;
-  height: 50px;
+  cursor: pointer;
   border: 2px solid #a2d2ff;
   background-color:#caf0f875;
   display: flex;
@@ -33,4 +32,9 @@
   gap: 25px;
  color: #212529;
  font-size: 20px;
+}
+
+ .selectedItem {
+ border: 2px solid #ff8fab;
+ color: #ff8fab;
 }

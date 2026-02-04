@@ -17,7 +17,13 @@ function FlexboxContext ({children}){
   const [flexGrow , setFlexGrow] = useState(0) //how much an item grows compared to other items when there is extra space
   const [flexShrink , setFlexShrink] =useState(1) //how much an item shrinks compared to others when space is limited
   const [alignSelf , setAlignSelf] = useState('auto') //Overrides the container’s align-items value for a single item.
+  const [height , setHeight] = useState(50)
+  const [width , setWidth] =useState(50)
 
+  const [nbrItems , setNbrItems] = useState(3)
+  const [selectedItems , setSelectedItems] = useState([])
+  const [itemProperties, setItemProperties] = useState({})
+   
   const value = {
     flexDirection , setFlexDirection,
     flexWrap, setFlexWrap,
@@ -27,7 +33,12 @@ function FlexboxContext ({children}){
     gap,setGap,
     flexGrow ,  setFlexGrow,
     flexShrink , setFlexShrink ,
-    alignSelf , setAlignSelf
+    alignSelf , setAlignSelf,
+    height , setHeight,
+    width, setWidth,
+    nbrItems , setNbrItems,
+    selectedItems , setSelectedItems,
+    itemProperties, setItemProperties
   }
 
   return(
